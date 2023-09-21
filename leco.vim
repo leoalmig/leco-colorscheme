@@ -1,5 +1,4 @@
 """ Leco Vim Colorscheme
-""" Inspired by stonewashed colorscheme
 
 """ Initial setup
 set background=light
@@ -68,14 +67,16 @@ let s:gutterbg    = s:mediumgray
 
 
 """ Vim groups
-call s:HLFgBg('Normal', s:black, s:white)
+call s:HLFgBg('Normal', s:black, s:lightyellow)
+call s:HLFgBg('MatchParen', s:black, s:lightblue)
+call s:HLFgBgEm('StatusLine', s:white, s:black, s:none)
+call s:HLFgBgEm('StatusLineNC', s:darkgray, s:black, s:none)
 call s:HLFgBg('LineNr', s:darkgray, s:mediumgray)
 call s:HLFgBg('SignColumn', s:darkgray, s:mediumgray)
 call s:HLBg('ColorColumn', s:lightred)
 call s:HLBgEm('CursorLine', s:lightgray, s:none)
 call s:HLBgEm('CursorLineNr', s:lightgray, s:none)
 call s:HLBgEm('CursorColumn', s:lightgray, s:none)
-call s:HLFgBg('MatchParen', s:black, s:lightblue)
 call s:HLFgBgEm('Error', s:black, s:red, s:none)
 call s:HLFgBgEm('Visual', s:black, s:lightblue, s:none)
 call s:HLFgBgEm('VertSplit', s:lightgray, s:black, s:none)
@@ -85,8 +86,6 @@ call s:HLFgBgEm('PmenuSel', s:white, s:black, s:none)
 hi Pmenu ctermbg=75 ctermfg=253 cterm=reverse
 hi PmenuSel ctermfg=253 ctermbg=75
 hi Wildmenu ctermbg=120 cterm=underline
-hi StatusLine ctermfg=144 ctermbg=140
-hi StatusLineNC ctermbg=144 ctermfg=144
 hi Underlined ctermfg=40 cterm=underline
 hi NonText ctermfg=244 ctermbg=254
 hi Title ctermfg=52
@@ -141,12 +140,6 @@ call s:HLFgBg('CocWarningHighlight', s:black, s:orange)
 call s:HLFgBg('CocHintHighlight', s:black, s:yellow)
 call s:HLFgBg('CocInfoHighlight', s:black, s:yellow)
 call s:HLFgEm('CocUnusedHighlight', s:darkgray, s:underline)
-
-" GitGutter
-call s:HLFgBg('GitGutterAdd', s:green, s:gutterbg)
-call s:HLFgBg('GitGutterDelete', s:red, s:gutterbg)
-call s:HLFgBg('GitGutterChange', s:black, s:gutterbg)
-call s:HLFgBg('GitGutterChangeDelete', s:black, s:gutterbg)
 
 """ REFERENCE
 " Color Chart http://i.stack.imgur.com/UQVe5.png
