@@ -1,1 +1,3 @@
 Personal vim colorscheme
+
+* Copy `leco.vim` to or create a symlink in `~/.vim/colors/`
